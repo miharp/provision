@@ -115,3 +115,17 @@ func (ci *CatalogItem) FileName() string {
 		return ci.Name
 	}
 }
+
+func (ci *CatalogItem) SliceOf() interface{} {
+	s := []*CatalogItem{}
+	return &s
+}
+
+func (ci *CatalogItem) ToModels(obj interface{}) []Model {
+	items := obj.(*[]*CatalogItem)
+	res := make([]Model, len(*items))
+	for i, item := range *items {
+		res[i] = Model(item)
+	}
+	return res
+}

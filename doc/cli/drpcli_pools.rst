@@ -1,19 +1,19 @@
-drpcli catalog_items
---------------------
+drpcli pools
+------------
 
-Access CLI commands relating to catalog_items
+Access CLI commands relating to pools
 
 Synopsis
 ~~~~~~~~
 
-Access CLI commands relating to catalog_items
+Access CLI commands relating to pools
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help   help for catalog_items
+     -h, --help   help for pools
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,20 +42,27 @@ SEE ALSO
 
 -  `drpcli <drpcli.html>`__ - A CLI application for interacting with the
    DigitalRebar Provision API
--  `drpcli catalog_items create <drpcli_catalog_items_create.html>`__ -
-   Create a new catalog_item with the passed-in JSON or string key
--  `drpcli catalog_items destroy <drpcli_catalog_items_destroy.html>`__
-   - Destroy catalog_item by id
--  `drpcli catalog_items exists <drpcli_catalog_items_exists.html>`__ -
-   See if a catalog_items exists by id
--  `drpcli catalog_items indexes <drpcli_catalog_items_indexes.html>`__
-   - Get indexes for catalog_items
--  `drpcli catalog_items list <drpcli_catalog_items_list.html>`__ - List
-   all catalog_items
--  `drpcli catalog_items show <drpcli_catalog_items_show.html>`__ - Show
-   a single catalog_items by id
--  `drpcli catalog_items update <drpcli_catalog_items_update.html>`__ -
-   Unsafely update catalog_item by id with the passed-in JSON
--  `drpcli catalog_items wait <drpcli_catalog_items_wait.html>`__ - Wait
-   for a catalog_item’s field to become a value within a number of
-   seconds
+-  `drpcli pools action <drpcli_pools_action.html>`__ - Display the
+   action for this pool
+-  `drpcli pools actions <drpcli_pools_actions.html>`__ - Display
+   actions for this pool
+-  `drpcli pools create <drpcli_pools_create.html>`__ - Create a new
+   pool with the passed-in JSON or string key
+-  `drpcli pools destroy <drpcli_pools_destroy.html>`__ - Destroy pool
+   by id
+-  `drpcli pools exists <drpcli_pools_exists.html>`__ - See if a pools
+   exists by id
+-  `drpcli pools indexes <drpcli_pools_indexes.html>`__ - Get indexes
+   for pools
+-  `drpcli pools list <drpcli_pools_list.html>`__ - List all pools
+-  `drpcli pools manage <drpcli_pools_manage.html>`__ - Manage machines
+   in pools
+-  `drpcli pools runaction <drpcli_pools_runaction.html>`__ - Run action
+   on object from plugin
+-  `drpcli pools show <drpcli_pools_show.html>`__ - Show a single pools
+   by id
+-  `drpcli pools status <drpcli_pools_status.html>`__ - Get Pool status
+-  `drpcli pools update <drpcli_pools_update.html>`__ - Unsafely update
+   pool by id with the passed-in JSON
+-  `drpcli pools wait <drpcli_pools_wait.html>`__ - Wait for a pool’s
+   field to become a value within a number of seconds

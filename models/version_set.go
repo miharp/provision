@@ -30,6 +30,9 @@ type VersionSet struct {
 
 	Id string
 
+	Documentation string
+	Description   string
+
 	Apply        bool
 	DRPVersion   string
 	DRPUXVersion string
@@ -54,6 +57,16 @@ func (vs *VersionSet) AuthKey() string {
 
 func (vs *VersionSet) Prefix() string {
 	return "version_sets"
+}
+
+// GetDocumentaiton returns the object's Documentation
+func (vs *VersionSet) GetDocumentation() string {
+	return vs.Documentation
+}
+
+// GetDescription returns the object's Description
+func (vs *VersionSet) GetDescription() string {
+	return vs.Description
 }
 
 // Clone the VersionSet
@@ -158,6 +171,25 @@ func (vs *VersionSet) Merge(nvs *VersionSet) {
 	}
 }
 
+func (vs *VersionSet) SliceOf() interface{} {
+	s := []*VersionSet{}
+	return &s
+}
+
+func (vs *VersionSet) ToModels(obj interface{}) []Model {
+	items := obj.(*[]*VersionSet)
+	res := make([]Model, len(*items))
+	for i, item := range *items {
+		res[i] = Model(item)
+	}
+	return res
+}
+
 func (vs *VersionSet) CanHaveActions() bool {
 	return true
+}
+
+// SetName sets the name. In this case, it sets Id.
+func (vs *VersionSet) SetName(name string) {
+	vs.Id = name
 }

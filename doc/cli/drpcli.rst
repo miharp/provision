@@ -43,6 +43,8 @@ SEE ALSO
    relating to bootenvs
 -  `drpcli catalog <drpcli_catalog.html>`__ - Access commands related to
    catalog manipulation
+-  `drpcli catalog_items <drpcli_catalog_items.html>`__ - Access CLI
+   commands relating to catalog_items
 -  `drpcli certs <drpcli_certs.html>`__ - Access CLI commands relating
    to certs
 -  `drpcli contents <drpcli_contents.html>`__ - Access CLI commands
@@ -82,6 +84,8 @@ SEE ALSO
    CLI commands relating to plugin_providers
 -  `drpcli plugins <drpcli_plugins.html>`__ - Access CLI commands
    relating to plugins
+-  `drpcli pools <drpcli_pools.html>`__ - Access CLI commands relating
+   to pools
 -  `drpcli prefs <drpcli_prefs.html>`__ - List and set DigitalRebar
    Provision operational preferences
 -  `drpcli profiles <drpcli_profiles.html>`__ - Access CLI commands
