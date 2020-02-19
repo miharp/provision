@@ -1,24 +1,28 @@
-drpcli files list
------------------
+drpcli endpoints wait
+---------------------
 
-List all files
+Wait for a endpoint’s field to become a value within a number of seconds
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+This function waits for the value to become the new value.
+
+Timeout is optional, defaults to 1 day, and is measured in seconds.
+
+Returns the following strings: complete - field is equal to value
+interrupt - user interrupted the command timeout - timeout has exceeded
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints wait [id] [field] [value] [timeout] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for wait
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +49,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints

@@ -1,24 +1,24 @@
-drpcli files list
------------------
+drpcli endpoints add
+--------------------
 
-List all files
+Add the endpoints param *key* to *blob*
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+Helper function to add parameters to the endpoints. Fails is already
+present.
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints add [id] param [key] to [json blob] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for add
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +45,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints

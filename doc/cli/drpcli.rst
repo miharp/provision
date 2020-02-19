@@ -51,6 +51,8 @@ SEE ALSO
    relating to contexts
 -  `drpcli debug <drpcli_debug.html>`__ - Gather [type] of debug
    information and save it to [target]
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints
 -  `drpcli events <drpcli_events.html>`__ - DigitalRebar Provision Event
    Commands
 -  `drpcli extended <drpcli_extended.html>`__ - Access CLI commands
@@ -107,5 +109,7 @@ SEE ALSO
    to users
 -  `drpcli version <drpcli_version.html>`__ - Digital Rebar Provision
    CLI Command Version
+-  `drpcli version_sets <drpcli_version_sets.html>`__ - Access CLI
+   commands relating to version_sets
 -  `drpcli workflows <drpcli_workflows.html>`__ - Access CLI commands
    relating to workflows

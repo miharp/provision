@@ -51,6 +51,10 @@ func (ci *CatalogItem) KeyName() string {
 	return "Id"
 }
 
+func (ci *CatalogItem) AuthKey() string {
+	return ci.Key()
+}
+
 func (ci *CatalogItem) Prefix() string {
 	return "catalog_items"
 }

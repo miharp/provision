@@ -1,24 +1,23 @@
-drpcli files list
------------------
+drpcli endpoints meta add
+-------------------------
 
-List all files
+Atomically add [key]:[val] to the metadata on [endpoints]:[id]
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+Atomically add [key]:[val] to the metadata on [endpoints]:[id]
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints meta add [id] key [key] val [val] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for add
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +44,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints meta <drpcli_endpoints_meta.html>`__ - Gets
+   metadata for the endpoint

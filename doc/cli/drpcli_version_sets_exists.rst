@@ -1,24 +1,23 @@
-drpcli files list
------------------
+drpcli version_sets exists
+--------------------------
 
-List all files
+See if a version_sets exists by id
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+This will detect if a version_set exists.
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli version_sets exists [id] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for exists
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +44,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli version_sets <drpcli_version_sets.html>`__ - Access CLI
+   commands relating to version_sets

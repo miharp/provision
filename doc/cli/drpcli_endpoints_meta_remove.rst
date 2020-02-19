@@ -1,24 +1,23 @@
-drpcli files list
------------------
+drpcli endpoints meta remove
+----------------------------
 
-List all files
+Remove the meta [key] from [endpoints]:[id]
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+Remove the meta [key] from [endpoints]:[id]
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints meta remove [id] key [key] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for remove
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +44,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints meta <drpcli_endpoints_meta.html>`__ - Gets
+   metadata for the endpoint

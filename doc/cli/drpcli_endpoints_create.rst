@@ -1,24 +1,28 @@
-drpcli files list
------------------
+drpcli endpoints create
+-----------------------
 
-List all files
+Create a new endpoint with the passed-in JSON or string key
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+As a useful shortcut, ‘-’ can be passed to indicate that the JSON should
+be read from stdin.
+
+In either case, for the Machine, BootEnv, User, and Profile objects, a
+string may be provided to create a new empty object of that type. For
+User, BootEnv, Machine, and Profile, it will be the object’s name.
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints create [json] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for create
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +49,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints

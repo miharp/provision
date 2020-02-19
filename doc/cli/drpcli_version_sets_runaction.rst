@@ -1,24 +1,24 @@
-drpcli files list
------------------
+drpcli version_sets runaction
+-----------------------------
 
-List all files
+Run action on object from plugin
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+Run action on object from plugin
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli version_sets runaction [id] [command] [- | JSON or YAML Map of objects | pairs of string objects] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help            help for runaction
+         --plugin string   Plugin to filter action search
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +45,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli version_sets <drpcli_version_sets.html>`__ - Access CLI
+   commands relating to version_sets

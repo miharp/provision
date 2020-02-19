@@ -1,24 +1,19 @@
-drpcli files list
------------------
+drpcli version_sets
+-------------------
 
-List all files
+Access CLI commands relating to version_sets
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
-
-::
-
-   drpcli files list [path] [flags]
+Access CLI commands relating to version_sets
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help   help for version_sets
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +40,29 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli <drpcli.html>`__ - A CLI application for interacting with the
+   DigitalRebar Provision API
+-  `drpcli version_sets action <drpcli_version_sets_action.html>`__ -
+   Display the action for this version_set
+-  `drpcli version_sets actions <drpcli_version_sets_actions.html>`__ -
+   Display actions for this version_set
+-  `drpcli version_sets create <drpcli_version_sets_create.html>`__ -
+   Create a new version_set with the passed-in JSON or string key
+-  `drpcli version_sets destroy <drpcli_version_sets_destroy.html>`__ -
+   Destroy version_set by id
+-  `drpcli version_sets exists <drpcli_version_sets_exists.html>`__ -
+   See if a version_sets exists by id
+-  `drpcli version_sets indexes <drpcli_version_sets_indexes.html>`__ -
+   Get indexes for version_sets
+-  `drpcli version_sets list <drpcli_version_sets_list.html>`__ - List
+   all version_sets
+-  `drpcli version_sets
+   runaction <drpcli_version_sets_runaction.html>`__ - Run action on
+   object from plugin
+-  `drpcli version_sets show <drpcli_version_sets_show.html>`__ - Show a
+   single version_sets by id
+-  `drpcli version_sets update <drpcli_version_sets_update.html>`__ -
+   Unsafely update version_set by id with the passed-in JSON
+-  `drpcli version_sets wait <drpcli_version_sets_wait.html>`__ - Wait
+   for a version_set’s field to become a value within a number of
+   seconds

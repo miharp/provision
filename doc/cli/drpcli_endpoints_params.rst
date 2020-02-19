@@ -1,24 +1,27 @@
-drpcli files list
------------------
+drpcli endpoints params
+-----------------------
 
-List all files
+Gets/sets all parameters for the endpoint
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+A helper function to return all or set all the parameters on the
+endpoint
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints params [id] [json] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+         --aggregate       Should return aggregated view
+         --decode          Should return decoded secure params
+     -h, --help            help for params
+         --params string   Should return only the parameters specified as a comma-separated list of parameter names.
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +48,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints

@@ -1,24 +1,24 @@
-drpcli files list
------------------
+drpcli endpoints actions
+------------------------
 
-List all files
+Display actions for this endpoint
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+Helper function to display the endpoint’s actions.
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints actions [id] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+     -h, --help            help for actions
+         --plugin string   Plugin to filter action search
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +45,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints

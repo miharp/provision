@@ -1,24 +1,27 @@
-drpcli files list
------------------
+drpcli endpoints show
+---------------------
 
-List all files
+Show a single endpoints by id
 
 Synopsis
 ~~~~~~~~
 
-You can pass an optional path parameter to show just part of the files
+This will show a endpoint by ID. You may also show a single item using a
+unique index. In that case, format id as *index*:*value*
 
 ::
 
-   drpcli files list [path] [flags]
+   drpcli endpoints show [id] [flags]
 
 Options
 ~~~~~~~
 
 ::
 
-     -h, --help      help for list
-         --recurse   Recursively list all files
+         --decode          Should decode any secure params.
+     -h, --help            help for show
+         --params string   Should return only the parameters specified as a comma-separated list of parameter names.
+         --slim string     Should elide certain fields.  Can be 'Params', 'Meta', or a comma-separated list of both.
 
 Options inherited from parent commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,5 +48,5 @@ Options inherited from parent commands
 SEE ALSO
 ~~~~~~~~
 
--  `drpcli files <drpcli_files.html>`__ - Access CLI commands relating
-   to files
+-  `drpcli endpoints <drpcli_endpoints.html>`__ - Access CLI commands
+   relating to endpoints
