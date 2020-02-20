@@ -1007,7 +1007,7 @@ func (c *Client) MakeProxy(socketPath string) error {
 		}
 	}()
 	os.Setenv("RS_LOCAL_PROXY", socketPath)
-	c.Client.Transport = transport()
+	c.Client.Transport = transport(true)
 	return nil
 }
 
@@ -1020,14 +1020,14 @@ func locallyProxied() string {
 	return ""
 }
 
-func transport() *http.Transport {
+func transport(useproxy bool) *http.Transport {
 	dialer := &net.Dialer{
 		Timeout:   30 * time.Second,
 		KeepAlive: 30 * time.Second,
 	}
 	var tr *http.Transport
 	lp := locallyProxied()
-	if lp == "" {
+	if lp == "" || !useproxy {
 		tr = &http.Transport{
 			Proxy:                 http.ProxyFromEnvironment,
 			TLSClientConfig:       &tls.Config{InsecureSkipVerify: true},
@@ -1056,7 +1056,7 @@ func transport() *http.Transport {
 // TokenSession creates a new api.Client that will use the passed-in Token for authentication.
 // It should be used whenever the API is not acting on behalf of a user.
 func TokenSession(endpoint, token string) (*Client, error) {
-	tr := transport()
+	tr := transport(true)
 	c := &Client{
 		mux:      &sync.Mutex{},
 		endpoint: endpoint,
@@ -1080,12 +1080,17 @@ func TokenSession(endpoint, token string) (*Client, error) {
 // UserSession does not currently attempt to cache tokens to
 // persistent storage, although that may change in the future.
 func UserSession(endpoint, username, password string) (*Client, error) {
-	return UserSessionToken(endpoint, username, password, true)
+	return UserSessionTokenProxy(endpoint, username, password, true, true)
 }
 
 // UserSessionToken allows for the token conversion turned off.
 func UserSessionToken(endpoint, username, password string, usetoken bool) (*Client, error) {
-	tr := transport()
+	return UserSessionTokenProxy(endpoint, username, password, usetoken, true)
+}
+
+// UserSessionTokenProxy allows for the token conversion turned off and turn off local proxy
+func UserSessionTokenProxy(endpoint, username, password string, usetoken, useproxy bool) (*Client, error) {
+	tr := transport(useproxy)
 	c := &Client{
 		mux:      &sync.Mutex{},
 		endpoint: endpoint,
