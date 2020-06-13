@@ -11,9 +11,9 @@ Quick Start
 
 .. note::  We HIGHLY recommend using the ``latest`` version of the documentation, as it contains the most up to date information.  Use the version selector in the lower right corner of your browser.
 
-This quick start guide provides a basic installation and start point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  While it is possible to install and run Digital Rebar Provision on a Windows instance, we do not cover that here.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.
+This quick start guide provides a basic installation and start point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.  Installation of the service (``dr-provision``) is not supported or possible on Windows operating systems.
 
-It is possible to install on hypervisors and in virtualized environments (eg. VirtualBox, VMware Workstation/Fusion, KVM, etc.).  Each of these environments requires careful setup up of your network environment and consideration with regard to competing DHCP services.  The setup of these environments is outside the scope of this document.
+It is possible to install on hypervisors and in virtualized environments (eg. VirtualBox, VMware Workstation/Fusion, KVM, etc.), or as a container (from Docker Hub).  Each of these environments requires careful setup up of your network environment and consideration with regard to competing DHCP services.  The setup of these environments is outside the scope of this document.
 
 For a full install, or for installations that require offline setup (no direct access to the internet to install prereqs, or pull down zip files), please see the full :ref:`rs_install` documentation.
 
@@ -142,8 +142,8 @@ These steps should be performed from the newly installed *dr-provision* endpoint
     drpcli bootenvs uploadiso sledgehammer
     drpcli prefs set defaultWorkflow discover-base unknownBootEnv discovery
     drpcli contents upload catalog:task-library-stable
-    drpcli bootenvs uploadiso ubuntu-18.04-install # optional
-    drpcli bootenvs uploadiso centos-7-install # optional
+    drpcli bootenvs uploadiso ubuntu-18.04-install # optional, requires about 3G of free space
+    drpcli bootenvs uploadiso centos-8-install # optional, requires about 15G of free space
 
 The ``uploadiso`` command will fetch the ISO image as specified in the BootEnv JSON spec, download it, and then "explode" it in to the ``drp-data/tftpboot/`` directory for installation use.  You may optionally choose one or both of the CentOS and Ubuntu BootEnvs (or any other Community Content supported BootEnv) to install; depending on which Operating System and Version you wish to test or use.
 

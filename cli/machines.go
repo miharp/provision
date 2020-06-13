@@ -23,7 +23,7 @@ func init() {
 	if DefaultStateLoc == "" {
 		switch runtime.GOOS {
 		case "windows":
-			DefaultStateLoc = os.ExpandEnv("${APPDATA}/drp-agent")
+			DefaultStateLoc = `C:/Windows/System32/config/systemprofile/AppData/Local/rackn/drp-agent`
 		default:
 			DefaultStateLoc = "/var/lib/drp-agent"
 		}
@@ -380,6 +380,21 @@ the stage runner wait flag.
 			return prettyPrint(res)
 		},
 	}
+	op.addCommand(&cobra.Command{
+		Use:   "whoami",
+		Short: "Figure out what machine UUID most closely matches the current system",
+		Args:  cobra.NoArgs,
+		RunE: func(c *cobra.Command, args []string) error {
+			whoami := &models.Whoami{}
+			if err := whoami.Fill(); err != nil {
+				return err
+			}
+			if err := Session.Req().Post(whoami).UrlFor("whoami").Do(&whoami); err != nil {
+				return err
+			}
+			return prettyPrint(whoami)
+		},
+	})
 	tokenFetch.Flags().StringVar(&tokenDuration, "ttl", "1h", "The time that the retrieved token should be valid.")
 	op.addCommand(tokenFetch)
 	op.addCommand(inspectCommands())
